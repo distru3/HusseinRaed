@@ -5,13 +5,21 @@ function Dep({ children }) {
   return <span className="dep">{children}</span>;
 }
 
-function Card({ index, name, subtitle, tag, year, desc, deps, badge, links, full }) {
+function Card({ index, name, subtitle, tag, year, desc, deps, badges, links, full }) {
   return (
     <Reveal delay={0.05 * index}>
       <article className={`card ${full ? 'card--full' : ''}`}>
         <div className="card__top">
           <span className="card__idx">{String(index).padStart(2, '0')}</span>
-          {badge && <span className="card__badge">✦ {badge}</span>}
+          {badges && badges.length > 0 && (
+            <span className="card__badges">
+              {badges.map((b) => (
+                <span className="card__badge" key={b}>
+                  ✦ {b}
+                </span>
+              ))}
+            </span>
+          )}
           <span className="tag-line">{tag}</span>
         </div>
         {subtitle && <p className="card__subtitle">{subtitle}</p>}
@@ -50,7 +58,7 @@ export default function Works() {
     year: astroos.year,
     desc: astroos.desc,
     deps: astroos.deps,
-    badge: astroos.badge,
+    badges: [astroos.badge, astroos.badge2].filter(Boolean),
     links: astroos.links,
   };
 
@@ -84,7 +92,7 @@ export default function Works() {
               year={p.year}
               desc={p.desc}
               deps={p.deps}
-              badge={null}
+              badges={null}
               links={p.links}
               full={p.full}
             />

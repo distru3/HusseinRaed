@@ -28,7 +28,8 @@ export const astroos = {
   subtitle: 'Astroos',
   year: '2025',
   badge: 'NASA Space Apps 2025 · Global Nominee',
-  desc: 'Astroos — a data-storytelling platform that reveals the 2023 Derna flood through Synthetic Aperture Radar (SAR) — Sentinel-1 flood mapping, radar-vs-optical comparison, interactive quizzes, and an AI chatbot grounded in NASA\u2019s open data. Advanced past 1,290 projects to global judging.',
+  desc: 'Astroos — a data-storytelling platform that reveals the 2023 Derna flood through Synthetic Aperture Radar (SAR) — Sentinel-1 flood mapping, radar-vs-optical comparison, interactive quizzes, and an AI chatbot grounded in NASA\u2019s open data. Advanced past 1,290 projects to global judging, and won the first-ever People\u2019s Choice award at its Cairo local event.',
+  badge2: "First-ever People's Choice · Cairo Local Event",
   deps: ['SAR / Sentinel-1', 'NASA Open Data', 'AI chatbot', 'React', 'Vercel'],
   links: [
     { label: 'live project', href: 'https://astroos-curiou-sar-1iat.vercel.app/' },
