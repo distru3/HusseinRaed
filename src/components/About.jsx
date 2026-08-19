@@ -14,26 +14,24 @@ export default function About() {
           </div>
         </Reveal>
 
-        <div className="about__grid">
-          <Reveal delay={0.05}>
-            <div className="about__bio">
-              {about.map((p, i) => (
-                <p key={i}>{p}</p>
-              ))}
-            </div>
-          </Reveal>
+        <Reveal delay={0.05}>
+          <div className="about__bio">
+            {about.map((p, i) => (
+              <p key={i}>{p}</p>
+            ))}
+          </div>
+        </Reveal>
 
-          <Reveal delay={0.1}>
-            <div className="facts">
-              {facts.map((f) => (
-                <div className="fact" key={f.k}>
-                  <span className="k">{f.k}</span>
-                  <span className="v">{f.v}</span>
-                </div>
-              ))}
-            </div>
-          </Reveal>
-        </div>
+        <Reveal delay={0.1}>
+          <div className="facts">
+            {facts.map((f) => (
+              <div className="fact" key={f.k}>
+                <span className="k">{f.k}</span>
+                <span className="v">{f.v}</span>
+              </div>
+            ))}
+          </div>
+        </Reveal>
       </div>
     </section>
   );
