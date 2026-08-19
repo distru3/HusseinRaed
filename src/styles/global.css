@@ -546,13 +546,6 @@ section {
   letter-spacing: 0.1em;
 }
 
-.card__badges {
-  display: inline-flex;
-  flex-wrap: wrap;
-  gap: var(--space-2);
-  justify-content: flex-end;
-}
-
 .card__badge {
   display: inline-flex;
   align-items: center;
